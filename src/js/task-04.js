@@ -7,13 +7,14 @@ function getRandomHexColor() {
 
 const createBoxes = (amount) => {
   const boxes = document.getElementById("boxes");
-  const firstBox = 30;
+  let firstBox = 30;
   for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
-    div.style.width = `${firstBox * 10}px`;
-    div.style.height = `${firstBox * 10}px`;
+    div.style.width = `${firstBox}px`;
+    div.style.height = `${firstBox}px`;
     div.style.backgroundColor = getRandomHexColor();
     boxes.appendChild(div)
+    firstBox +=10;
   }
 }
 
